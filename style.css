@@ -1,0 +1,128 @@
+*{
+box-sizing: border-box;
+}
+body
+{
+    overflow-y: scroll;
+}
+#timer
+{
+    height: 65px;
+    font-size: 20px;
+    line-height: 28px;
+    width: 100px;
+    border-radius: 10%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 207, 207);
+}
+#btns
+{
+    background-color: rgb(250, 220, 182);
+    width: 250px;
+    height: 250px;
+    font-size: 0;
+    margin: 50px auto;
+}
+h2,p,h3
+{
+    text-align: center;
+}
+p
+{
+    font-weight: 550;
+    font-size: 16px;
+}
+#btn11
+{
+    border: 4px solid rgb(77, 1, 1)!important;
+    border-right-width: 0px!important;
+}
+#btn12
+{
+    border: 4px solid rgb(77, 1, 1)!important;
+    border-right-width: 0px!important;
+    border-left-width: 0px!important;
+}
+#btn13
+{
+    border: 4px solid rgb(77, 1, 1)!important;
+    border-right-width: 0px!important;
+    border-left-width: 0px!important;
+}
+#btn14
+{
+    border: 4px solid rgb(77, 1, 1)!important;
+    border-right-width: 0px!important;
+    border-left-width: 0px!important;
+}
+#btn15
+{
+    border: 4px solid rgb(77, 1, 1)!important;
+    border-left-width: 0px!important;
+}
+button
+{   
+    background-color: rgb(238, 178, 99);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    /* float:left; */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid #da8301!important;
+}
+#btn7
+{
+    background-color: rgb(209, 4, 4);
+    color: aliceblue;
+}
+#btn9
+{
+    background-color: rgb(2, 199, 2);
+    color: aliceblue;
+}
+#btn17
+{
+    background-color: blue;
+    color: aliceblue;
+}
+#btn19
+{
+    background-color: yellow;
+}
+#btn7:hover, #btn9:hover, #btn17:hover, #btn19:hover
+{
+    cursor: pointer;
+}
+.lastBtns
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    height: 48px;
+}
+#sub,#set
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    display: flex;
+    justify-content: center; /*Horizontal alignment*/
+    align-items: center; /*Vertical Allignment*/
+    font-size: 24px;
+    height: 48px;
+    background-color: #f9ab37;
+    border-radius: 10%;
+}
+#sub:hover,#set:hover
+{
+    cursor: pointer;
+    background-color: #f8c270;
+}
