@@ -1,5 +1,13 @@
+var arr = [];
+let code=document.getElementById("code");
+while(arr.length < 5){
+var r = Math. floor(Math. random()*25) + 1;
+if(arr.indexOf(r) === -1 && r!=7 && r!=9 && r!=17 && r!=19) 
+arr.push(r);
+}
+code.innerHTML=arr;
 var counterSec=0,counterMin=0,counterHour=0;
-setInterval(()=>{
+const timer=setInterval(()=>{
     counterSec+=1;
     if(counterSec>59)
     {
@@ -20,7 +28,7 @@ setInterval(()=>{
     scm="0"+scm;
     if(counterSec<10)
     scs="0"+scs;
-    document.getElementById("timer").innerHTML="Timer:<br/>"+sch+":"+scm+":"+scs;
+    document.getElementById("timer").innerHTML=""+sch+":"+scm+":"+scs;
 },1000);
 var btn=[];
 for(var i=1;i<6;i++)
@@ -39,7 +47,10 @@ function generateCode()
 {
     let code="";
     for(var i=0;i<5;i++)
-    code+=String(btn[2][i].innerHTML)+" ";
+    {
+        if(i!=4) code+=String(btn[2][i].innerHTML)+",";
+        else code+=String(btn[2][i].innerHTML);
+    }
     return code;
 }
 btn[1][1].onclick=()=>{
@@ -185,17 +196,20 @@ btn[3][3].onclick=()=>
         btn[3][2].style["color"]="black";
         document.getElementById("codeArea").innerHTML=generateCode();
     };
-    var initCode="21 16 15 8 13 ";
+    var initCode=arr.toString();
     var submit=document.getElementById("sub");
     submit.onclick=()=>{
         var tempCode=generateCode();
         if(tempCode==initCode)
         {
-            window.alert("Congratulations!!!\nyou broke the code!!!");
+            window.alert("Congratulations!!!\nyou broke the code in \nTime : "+document.getElementById("timer").innerHTML+" !!!" );
+            clearInterval(timer);
         }
         else
         {
             window.alert("Failed!!!\nTry again!!!");
         }
+        console.log(initCode);
+        console.log(tempCode);
     }
     document.body.scrollTop=document.body.scrollHeight;
